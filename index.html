@@ -26,20 +26,25 @@
     <header>
         <div class="logo-container">
             <a href="https://nanalab.kr" target="_blank">
-                <img src="logo.png" alt="NanaLab Logo" class="logo">
+                <img src="logo.png" alt="NanaLab Logo" class="logo-img">
             </a>
         </div>
         <div class="app-title">Smart Doc Compressor</div>
     </header>
 
-    <main>
-        <div class="container">
-            <div class="upload-area" id="drop-zone">
+    <div class="main-container">
+        <div class="hero-section">
+            <h1 class="hero-title">Secure & Smart Compression</h1>
+            <p class="hero-subtitle">All files are processed in your browser, and no data is ever leaked externally.</p>
+        </div>
+
+        <div class="upload-container">
+            <div class="drop-zone" id="drop-zone">
                 <div class="upload-icon">
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                 </div>
                 <h2>Upload or Drop your file!</h2>
-                <p class="sub-text">Support PDF, PPT, DOC, HWP, Images (JPG, PNG)</p>
+                <p class="sub-text">Support PDF, PPT, DOC, Images (JPG, PNG)</p>
                 <input type="file" id="file-input" multiple
                     accept=".pdf,.ppt,.pptx,.doc,.docx,.hwp,.hwpx,.jpg,.jpeg,.png,.webp" hidden>
                 <button class="upload-btn" id="upload-btn">Select Files</button>
@@ -52,9 +57,9 @@
                 </ul>
             </div>
         </div>
-    </main>
+        </main>
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
