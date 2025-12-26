@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- JSZip for client-side file compression -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- pdf.js and jsPDF for PDF rasterization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        // Set worker source for pdf.js
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
 </head>
+
 <body>
     <header>
         <div class="logo-container">
@@ -28,8 +39,9 @@
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                 </div>
                 <h2>Upload or Drop your file!</h2>
-                <p class="sub-text">Support PDF, PPT, DOC, HWP</p>
-                <input type="file" id="file-input" multiple accept=".pdf,.ppt,.pptx,.doc,.docx,.hwp,.hwpx" hidden>
+                <p class="sub-text">Support PDF, PPT, DOC, HWP, Images (JPG, PNG)</p>
+                <input type="file" id="file-input" multiple
+                    accept=".pdf,.ppt,.pptx,.doc,.docx,.hwp,.hwpx,.jpg,.jpeg,.png,.webp" hidden>
                 <button class="upload-btn" id="upload-btn">Select Files</button>
             </div>
 
@@ -44,4 +56,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
